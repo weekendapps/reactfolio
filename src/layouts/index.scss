@@ -1,0 +1,30 @@
+@import '../styles/variables';
+:root {
+	box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: $primary-font;
+	background-color: $lighter-gray;
+}
+// This add a top margin to every element PS : Overide in the element
+body * + * {
+	margin-top: 1.5em;
+}
+.container {
+	margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $header-font;
+}
