@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.circle-shape {
+    width: 80px;
+    height: 80px;
+    background-color: blue;
+    border-radius: 100%;
+    position: relative;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

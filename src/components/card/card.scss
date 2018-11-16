@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.card-box{
+    width: 33%;
+}
+
+.circle{
+    position:absolute;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-shape{
+    width: 100%;
+    margin-right: 32px;
+    margin-bottom: 32px;
+    padding: 48px;
+    background-color: white;
+    position: relative;
+}
+
+.card-title{
+    text-align: center;
+    font-size: 18pt;
+    margin-top: 16px;
+}
+
+.card-list{
+    font-size: 14pt
+}
