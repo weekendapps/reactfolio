@@ -1,0 +1,24 @@
+@import '../styles/variables';
+
+.cards{
+    width: 100%;
+    margin-top: 100px;
+}
+
+.front-end{
+    width: 31%;
+    float: left;
+}
+
+.back-end{
+    width: 31%;
+    float: left;
+    margin-left: 3.5%;
+    margin-top: 0
+}
+
+.other-skills{
+    width: 31%;
+    float: right;
+    margin-top: 0
+}

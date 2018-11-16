@@ -4,7 +4,7 @@ import Circle from './circle';
 
 
 const Card = ({icon, title, args}) => (
-    <div className="card-box">
+    <div>
         <div className="card-shape">
             <div className="circle">
                 <Circle icon={icon}> </Circle>

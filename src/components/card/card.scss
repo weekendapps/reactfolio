@@ -1,8 +1,5 @@
 @import '../../styles/variables';
 
-.card-box{
-    width: 33%;
-}
 
 .circle{
     position:absolute;
@@ -19,6 +16,9 @@
     padding: 48px;
     background-color: white;
     position: relative;
+
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
 .card-title{
@@ -28,5 +28,12 @@
 }
 
 .card-list{
-    font-size: 14pt
+    font-size: 12pt;
+    margin-top:-4px;
+    vertical-align:middle;
+}
+
+.icon-list{
+    width: 8%;
+    margin-right: 8px
 }
