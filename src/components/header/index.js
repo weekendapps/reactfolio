@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Logo from './logo';
+import Menu from './menu';
 import './header.scss';
 
 var SocialMedia =[
@@ -18,13 +19,16 @@ const SocialMediaList = SocialMedia.map((social) =>
 );
 
 
-const Header = ({ socialMedia }) => (
+const Header = ( { siteTitle } ) => (
 	<header>
+		{SocialMediaList}
 		<div className="header-container">
 			<Logo title="Andelus" />
 		</div>
-		<div className="social-media">
-			{SocialMediaList}
+		<div className="navbar">
+			<a href="">Home</a>
+			<a href="">News</a>
+			<a href="">Contact</a>
 		</div>
 	</header>
 );
