@@ -13,7 +13,9 @@ header {
 	max-width: 1120px;
 	flex: 1 1 auto;
 	display: flex;
+	float: left;
 }
+
 .logo {
 	flex: 0 0 5%;
 	text-align: center;
@@ -24,3 +26,34 @@ header {
 		justify-content: center;
 	}
 }
+
+.social-media{
+	float: right;
+	margin-top:0;
+	vertical-align: middle
+}
+
+.social-icons{
+	width: 35%;
+	margin: 0;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay{
+	margin: 0;
+	margin-top: 6px;
+	margin-right: 8px;
+	width: 42px;
+	height: 42px;
+	display: inline-block;
+	border-radius: 50%;
+	position: relative;
+}
+
+.overlay:hover {
+	background-color: #000;
+}
+
