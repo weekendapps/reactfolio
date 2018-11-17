@@ -27,8 +27,9 @@ const Header = ( { siteTitle } ) => (
 		</div>
 		<div className="navbar">
 			<a href="">Home</a>
-			<a href="">News</a>
-			<a href="">Contact</a>
+			<a className="line" href="">News</a>
+			<a className="line" href="">Contact</a>
+			<hr/>
 		</div>
 	</header>
 );
