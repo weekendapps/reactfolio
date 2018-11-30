@@ -20,7 +20,8 @@ body * + * {
 	margin-top: 1.5em;
 }
 .container {
-	max-width: 1080px;
+	//max-width: 1080px;
+	width: 100%; //add this to have the full width
 	margin: 0 auto;
 	padding: 0.5em;
 }

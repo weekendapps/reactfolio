@@ -3,6 +3,7 @@ import './index.scss';
 
 import Link from 'gatsby-link'
 import Card from '../components/card/card'
+import Biography from '../components/biography/biography'
 
 //----------------------------- Declare FrontEnd Skills -----------------------------//
 var FrontSkills =[
@@ -55,23 +56,26 @@ const OtherSkills = OtherSkill.map((skill) =>
 //----------------------------- Display Components -----------------------------//
 
 const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-    <div className="cards">
-        <div className="front-end">
-            <Card icon={require('../icons/frontend-icon.png')} title="Frontend" args={FrontEndSkills}></Card>  
-        </div>
-        <div className="back-end">
-            <Card icon={require('../icons/frontend-icon.png')} title="Backend" args={BackEndSkills}></Card>  
-        </div>
-        <div className="other-skills">
-            <Card icon={require('../icons/other-skills-icon.png')} title="Others" args={OtherSkills}></Card>  
+    <div>
+        <Biography></Biography>
+        <div className="child-container">
+            <h1>Hi people</h1>
+            <p>Welcome to your new Gatsby site.</p>
+            <p>Now go build something great.</p>
+            <Link to="/page-2/">Go to page 2</Link>
+            <div className="cards">
+                <div className="front-end">
+                    <Card icon={require('../icons/frontend-icon.png')} title="Frontend" args={FrontEndSkills}></Card>  
+                </div>
+                <div className="back-end">
+                    <Card icon={require('../icons/frontend-icon.png')} title="Backend" args={BackEndSkills}></Card>  
+                </div>
+                <div className="other-skills">
+                    <Card icon={require('../icons/other-skills-icon.png')} title="Others" args={OtherSkills}></Card>  
+                </div>
+            </div>
         </div>
     </div>
-  </div>
 )
 
 export default IndexPage
