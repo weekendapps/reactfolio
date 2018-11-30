@@ -57,7 +57,10 @@ const OtherSkills = OtherSkill.map((skill) =>
 
 const IndexPage = () => (
     <div>
-        <Biography></Biography>
+        <Biography image={require('../icons/image.jpg')}
+            name="Amel AZZI"
+            bio="I'm a full-stack developer specialised in frontend and backend development for complex scalable web apps. I write about web development on my blog and regularly speak at various web conferences and meetups. Want to know how I may help your project? Check out my project case studies and resume.">
+        </Biography>
         <div className="child-container">
             <h1>Hi people</h1>
             <p>Welcome to your new Gatsby site.</p>
