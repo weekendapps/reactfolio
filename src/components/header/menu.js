@@ -3,13 +3,11 @@ import React from 'react';
 import './header.scss';
 
 const Menu = () => (
-    <div className="navbar">
+    <div id="menu" className="navbar">
+        <a href="">Home</a>
+        <a href="">News</a>
         <a href="">Contact</a>
-        <a href="">Resume</a>
-        <a href="">Blog</a>
-        <a href="">Talks</a>
-        <a href="">Project</a>
-        <a href="">About</a>
+        <hr id="hr"/>
     </div>
 );
 

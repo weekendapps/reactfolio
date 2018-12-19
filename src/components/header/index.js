@@ -2,6 +2,7 @@ import React from 'react';
 
 import Logo from './logo';
 import Menu from './menu';
+//import Biography from '../biography/biography';
 import './header.scss';
 
 var SocialMedia =[
@@ -20,18 +21,32 @@ const SocialMediaList = SocialMedia.map((social) =>
 
 
 const Header = ( { siteTitle } ) => (
-	<header>
+	<header id="header">
 		{SocialMediaList}
 		<div className="header-container">
 			<Logo title="Andelus" />
 		</div>
-		<div className="navbar">
-			<a href="">Home</a>
-			<a className="line" href="">News</a>
-			<a className="line" href="">Contact</a>
-			<hr/>
+		<Menu></Menu>
+		<div className="menu-toggle">
+			<img src={require("../../icons/menu-icon.png")} onClick={menuToggle} />
 		</div>
 	</header>
 );
+
+var bool = false;
+function menuToggle(){
+	if(!bool) {
+		console.log("clicked");
+		document.getElementById("header").style.height="14.5em";
+		//document.getElementById("bio").style.marginTop="11.5em";
+		bool = true;
+	}else{
+		console.log("Not clicked");
+		document.getElementById("header").style.height="4em";
+		//document.getElementById("bio").style.marginTop="0";
+		bool = false;
+	}
+	
+}
 
 export default Header;

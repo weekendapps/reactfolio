@@ -3,7 +3,7 @@ import './biography.scss';
 
 
 const Biography = ({image, name, bio}) => (
-    <div className="container">
+    <div className="bio-container">
         <div className="image-container">
             <img className="profil-pic" src={image} />
         </div>

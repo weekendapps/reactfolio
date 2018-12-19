@@ -17,13 +17,13 @@ body {
 }
 // This add a top margin to every element PS : Overide in the element
 body * + * {
-	margin-top: 1.5em;
+	//margin-top: 1.5em;
 }
 .container {
 	//max-width: 1080px;
 	width: 100%; //add this to have the full width
 	margin: 0 auto;
-	padding: 0.5em;
+	padding: 0;
 }
 a {
 	color: $blue;

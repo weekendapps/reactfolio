@@ -4,6 +4,8 @@ import './index.scss';
 import Link from 'gatsby-link'
 import Card from '../components/card/card'
 import Biography from '../components/biography/biography'
+import Client from '../components/client/client'
+
 
 //----------------------------- Declare FrontEnd Skills -----------------------------//
 var FrontSkills =[
@@ -62,22 +64,25 @@ const IndexPage = () => (
             bio="I'm a full-stack developer specialised in frontend and backend development for complex scalable web apps. I write about web development on my blog and regularly speak at various web conferences and meetups. Want to know how I may help your project? Check out my project case studies and resume.">
         </Biography>
         <div className="child-container">
-            <h1>Hi people</h1>
-            <p>Welcome to your new Gatsby site.</p>
-            <p>Now go build something great.</p>
+            <div className="overview-container">
+                <h1>Hi people</h1>
+                <p>I have more than 8 years' experience building rich web applications for clients all over the world. Below is a quick overview of my main technical skill sets and tools I use. Want to find out more about my experience?</p>  
+                <a> Check out my online resume. </a>
+            </div>
             <Link to="/page-2/">Go to page 2</Link>
-            <div className="cards">
-                <div className="front-end">
-                    <Card icon={require('../icons/frontend-icon.png')} title="Frontend" args={FrontEndSkills}></Card>  
-                </div>
-                <div className="back-end">
-                    <Card icon={require('../icons/frontend-icon.png')} title="Backend" args={BackEndSkills}></Card>  
-                </div>
-                <div className="other-skills">
-                    <Card icon={require('../icons/other-skills-icon.png')} title="Others" args={OtherSkills}></Card>  
-                </div>
+        </div>
+        <div className="cards">
+            <div className="front-end">
+                <Card icon={require('../icons/frontend-icon.png')} title="Frontend" args={FrontEndSkills}></Card>  
+            </div>
+            <div className="back-end">
+                <Card icon={require('../icons/frontend-icon.png')} title="Backend" args={BackEndSkills}></Card>  
+            </div>
+            <div className="other-skills">
+                <Card icon={require('../icons/other-skills-icon.png')} title="Others" args={OtherSkills}></Card>  
             </div>
         </div>
+        <Client></Client>
     </div>
 )
 

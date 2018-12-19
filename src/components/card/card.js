@@ -14,7 +14,6 @@ const Card = ({icon, title, args}) => (
                 {args}
             </div>
         </div>
-
     </div>
 );
 

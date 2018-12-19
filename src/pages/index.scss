@@ -1,13 +1,24 @@
 @import '../styles/variables';
 
 
-.child-container{
+.child-container, .cards{
     max-width: 88%;
     margin-left: 6%;
 }
 
+.overview-container{
+    width: 60%;
+    margin-top: 48px;
+    margin-left: 20%;
+    text-align: center
+}
+
 .cards{
     margin-top: 100px;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 .front-end{
@@ -18,7 +29,6 @@
 .back-end{
     width: 31.5%;
     float: left;
-    margin-left: 2.75%;
     margin-top: 0
 }
 
@@ -26,4 +36,12 @@
     width: 31.5%;
     float: right;
     margin-top: 0;
+}
+
+@media (max-width: 35em) {
+    .front-end, .back-end,  .other-skills{
+        width: 100%;
+        margin: 0;
+        padding-bottom: 48px;
+    }
 }

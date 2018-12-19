@@ -1,0 +1,28 @@
+.client-container{
+    background-color: white;
+    text-align: center;
+    margin-top: 32px;
+    padding: 32px
+}
+
+.logos{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between
+}
+
+.logo{
+    flex: 0 0 12%
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+    opacity: 0.5;
+}
+
+.logos img:hover{
+    opacity: .7;
+}
