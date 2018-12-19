@@ -6,15 +6,16 @@
 }
 
 .logos{
-    width: 90%;
-    margin-left: 5%;
+    margin-top: 48px;
     display: flex;
     align-items: center;
-    justify-content:space-between
+    justify-content:center;
+    flex-flow: row wrap
 }
 
 .logo{
-    flex: 0 0 12%
+    flex: 0 0 140px;
+    margin: 0 24px;
 }
 
 img{

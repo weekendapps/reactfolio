@@ -7,7 +7,7 @@ var CliensLogo =[
     {logo: require("../../icons/logos/airbnb.png")},
     {logo: require("../../icons/logos/dropbox.png")},
     {logo: require("../../icons/logos/spotify.png")},
-    {logo: require("../../icons/logos/evernote.png")},
+    {logo: require("../../icons/logos/evernote.png")}
 ];
 
 const Logos = CliensLogo.map((lg) =>
