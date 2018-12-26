@@ -45,3 +45,27 @@
         padding-bottom: 48px;
     }
 }
+
+.clients-container{
+    background-color: white;
+}
+
+.rcmds-container{
+    background: #FBFBFB;
+    height: 22em;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+}
+
+.rcmd{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 60%;
+    transition: transform 0.8s;
+}
+ 

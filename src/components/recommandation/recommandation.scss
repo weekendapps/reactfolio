@@ -1,0 +1,55 @@
+.rcmd-container {
+    padding: 32px;
+    background-color: white;
+    box-shadow:  0 0 28px  rgba(194, 194, 194, 0.6);
+}
+
+.rcmd-blockQuote{
+    display: flex;
+    flex-direction: column;
+}
+
+.rcmd-blockQuote img {
+    width: 3%
+}
+
+.rcmd-blockQuote #container {
+    margin-left: 6%;
+    margin-top: -12px;
+}
+
+.rcmd-footer {
+    display: flex;
+    align-items: center;
+}
+
+.img-container{
+    max-width: 12%;
+    margin-right: 2%
+}
+
+.rcmd-footer img {
+    width: 100%;
+    border-radius: 50%;
+    margin-top: 16px;
+}
+
+.rcmd-footer p {
+    color: grey;
+    margin: 4px;
+}
+
+.linkedin-container{
+    width: 20%;
+    margin: 0
+}
+
+.linkedin-container img{
+    width: 20%;
+    vertical-align: middle;
+}
+
+.linkedin-container a{
+    margin-left: 4px;
+    vertical-align: middle;
+}

@@ -1,12 +1,11 @@
 .client-container{
-    background-color: white;
     text-align: center;
-    margin-top: 32px;
+    margin-top: 48px;
     padding: 32px
 }
 
 .logos{
-    margin-top: 48px;
+    margin-top: 32px;
     display: flex;
     align-items: center;
     justify-content:center;
@@ -18,7 +17,7 @@
     margin: 0 24px;
 }
 
-img{
+.logo img{
     max-width: 100%;
     vertical-align: middle;
     opacity: 0.5;
