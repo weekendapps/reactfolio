@@ -115,6 +115,7 @@ const IndexPage = () => (
                 </div>
             </div>
             <button onClick={nextRcmd}> suivant </button>
+            <button onClick={previousRcmd}> Back </button>
         </div>
     </div>
 )
@@ -139,6 +140,17 @@ function nextRcmd(){
     let newRcmd = rcmdsList[0];
     rcmdsList.shift();
     rcmdsList.push(newRcmd);
+    rcmdsList[0].style.transform='translate(-155%, -50%)';
+    rcmdsList[1].style.transform='translate(-50%, -50%)';
+    rcmdsList[2].style.transform='translate(55%, -50%)';
+    rcmdsList[3].style.transform='translate(175%, -50%)';
+}
+
+function previousRcmd(){
+    let newRcmd = rcmdsList[rcmdsList.length-1];
+    rcmdsList.pop();
+    rcmdsList.unshift(newRcmd);
+
     rcmdsList[0].style.transform='translate(-155%, -50%)';
     rcmdsList[1].style.transform='translate(-50%, -50%)';
     rcmdsList[2].style.transform='translate(55%, -50%)';
