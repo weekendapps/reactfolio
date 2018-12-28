@@ -93,22 +93,17 @@ header {
 
 .menu-toggle > img {
 	width: 30px;
-	margin-top: -6px;
+	margin-top: 16px;
 	cursor: pointer;
 	display: none;
 }
 
 @media (max-width: 35em) {
-	.header-container {
-		//justify-content: center;
-	}
-
 	.menu-toggle > img {
 		display: block;
 	}
 
 	.navbar {
-		//display: none;
 		position: absolute;
 		width: 100%;
 		background-color: $dark;

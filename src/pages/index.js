@@ -6,6 +6,8 @@ import Card from '../components/card/card'
 import Biography from '../components/biography/biography'
 import Client from '../components/client/client'
 import Recommandation from '../components/recommandation/recommandation'
+import CircleSlide from '../components/circleSlide/circleSlide'
+import { func } from 'prop-types';
 
 //_________________________________
 
@@ -89,65 +91,122 @@ const IndexPage = () => (
         <div className="clients-container">
             <Client></Client>
             <div className="rcmds-container">
-                <div id="1" className="rcmd">
+                <div id="0" className="rcmd">
                     <Recommandation pic={require("../icons/image.jpg")} 
                         text="Steve is a great developer! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto."
                         name="1" job="Software Engineering">
                     </Recommandation>
                 </div>
-                <div id="2" className="rcmd">
+                <div id="1" className="rcmd">
                     <Recommandation pic={require("../icons/image.jpg")} 
                         text="Steve is a great developer! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto."
                         name="2" job="Software Engineering">
                     </Recommandation>
                 </div>
-                <div id="3" className="rcmd">
+                <div id="2" className="rcmd">
                     <Recommandation pic={require("../icons/image.jpg")} 
                         text="Steve is a great developer! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto."
                         name="3" job="Software Engineering">
                     </Recommandation>
                 </div>
-                <div id="4" className="rcmd">
+                <div id="3" className="rcmd">
                     <Recommandation pic={require("../icons/image.jpg")} 
                         text="Steve is a great developer! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto."
                         name="4" job="Software Engineering">
                     </Recommandation>
                 </div>
+                <div className="slide-btn">
+                    <div>
+                        <img src={require("../icons/back-icon.png")}
+                            onClick={previousRcmd}/>
+                    </div>
+                    <div>
+                        <img src={require("../icons/next-icon.png")}
+                            onClick={nextRcmd}/>
+                    </div>
+                </div>
             </div>
-            <button onClick={nextRcmd}> suivant </button>
-            <button onClick={previousRcmd}> Back </button>
+            <div className="slides-container">
+                <div className="slide">
+                    <CircleSlide></CircleSlide>
+                </div>
+                <div className="slide">
+                    <CircleSlide></CircleSlide>
+                </div>
+                <div className="slide">
+                    <CircleSlide></CircleSlide>
+                </div>
+                <div className="slide">
+                    <CircleSlide></CircleSlide>
+                </div>
+            </div>
         </div>
     </div>
 )
 
 export default IndexPage
 
+let slides = document.querySelectorAll('.slide');
+    slides[1].childNodes[0].style.backgroundColor="black";
 
 let rcmds = document.querySelectorAll('.rcmd');
     rcmds[0].style.transform='translate(-155%, -50%)';
     rcmds[1].style.transform='translate(-50%, -50%)';
     rcmds[2].style.transform='translate(55%, -50%)';
     rcmds[3].style.transform='translate(175%, -50%)';
-    
+
+let i=0; 
+while(i<rcmds.length){
+    if(i==1){
+        rcmds[i].style.opacity='1';
+    }else{
+        rcmds[i].style.opacity='0.5';
+    }
+    i++
+}
+
 let rcmdsList = [];
-let i=0;
+i=0;    
 while(i<rcmds.length){
     rcmdsList.push(rcmds[i]);
     i++
 }
 
+
 function nextRcmd(){
     let newRcmd = rcmdsList[0];
+    let j=0;
     rcmdsList.shift();
     rcmdsList.push(newRcmd);
+
     rcmdsList[0].style.transform='translate(-155%, -50%)';
+    //rcmdsList[0].style.opacity='0.5';
+    //slides[rcmdsList[0].id].childNodes[0].style.backgroundColor="grey";
     rcmdsList[1].style.transform='translate(-50%, -50%)';
+    //rcmdsList[1].style.opacity='1';
+    //slides[rcmdsList[1].id].childNodes[0].style.backgroundColor="black";
     rcmdsList[2].style.transform='translate(55%, -50%)';
+    //rcmdsList[2].style.opacity='0.5';
+    //slides[rcmdsList[2].id].childNodes[0].style.backgroundColor="grey";
     rcmdsList[3].style.transform='translate(175%, -50%)';
+    //rcmdsList[3].style.opacity='0.5';
+    //slides[rcmdsList[3].id].childNodes[0].style.backgroundColor="grey";
+
+    while(j<rcmdsList.length){
+        if(j==1){
+            rcmdsList[j].style.opacity='1';
+            slides[rcmdsList[j].id].childNodes[0].style.backgroundColor="black";
+        }else{
+            rcmdsList[j].style.opacity='0.5';
+            slides[rcmdsList[j].id].childNodes[0].style.backgroundColor="grey";
+        }
+        j++
+    }
 }
 
 function previousRcmd(){
     let newRcmd = rcmdsList[rcmdsList.length-1];
+    let k=0;
     rcmdsList.pop();
     rcmdsList.unshift(newRcmd);
 
@@ -155,4 +214,15 @@ function previousRcmd(){
     rcmdsList[1].style.transform='translate(-50%, -50%)';
     rcmdsList[2].style.transform='translate(55%, -50%)';
     rcmdsList[3].style.transform='translate(175%, -50%)';
+    while(k<rcmdsList.length){
+        if(k==1){
+            rcmdsList[k].style.opacity='1';
+            slides[rcmdsList[k].id].childNodes[0].style.backgroundColor="black";
+        }else{
+            rcmdsList[k].style.opacity='0.5';
+            slides[rcmdsList[k].id].childNodes[0].style.backgroundColor="grey";
+        }
+        k++
+    }
 }
+

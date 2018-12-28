@@ -1,7 +1,7 @@
 .rcmd-container {
     padding: 32px;
     background-color: white;
-    box-shadow:  0 0 28px  rgba(194, 194, 194, 0.6);
+    box-shadow:  0 0 32px  rgba(196, 196, 196, 0.6);
 }
 
 .rcmd-blockQuote{
@@ -10,11 +10,11 @@
 }
 
 .rcmd-blockQuote img {
-    width: 3%
+    width: 20px
 }
 
 .rcmd-blockQuote #container {
-    margin-left: 6%;
+    margin-left: 42px;
     margin-top: -12px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .img-container{
-    max-width: 12%;
+    max-width: 90px;
     margin-right: 2%
 }
 
@@ -41,7 +41,8 @@
 
 .linkedin-container{
     width: 20%;
-    margin: 0
+    margin: 0;
+    margin-left: 80%
 }
 
 .linkedin-container img{
@@ -52,4 +53,23 @@
 .linkedin-container a{
     margin-left: 4px;
     vertical-align: middle;
+    color: grey;
+}
+
+.linkedin-container a:hover{
+    cursor: pointer;
+    text-decoration: underline
+}
+
+@media (max-width: 35em) {
+    .linkedin-container{
+        width: 40%;
+        margin: 0;
+        margin-left: 65%
+    }
+    
+    .linkedin-container img{
+        width: 15%;
+        vertical-align: middle;
+    }
 }
