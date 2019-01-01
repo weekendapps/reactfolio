@@ -1,0 +1,50 @@
+.featuresPrj{
+    width: 100%;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    padding-bottom: 8%;
+    text-align: center;
+}
+
+.featuresPrj img{
+    width: 100%;
+}
+
+.div-cover{
+    width: 100%;
+    height: 17em;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+}
+
+.img-cover{
+    position: absolute;
+    width: 40% !important;
+    top: 30%;
+    left: 30%;
+}
+
+.prjTech-container{
+    max-width: 92%;
+    margin-left: 4%;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.prjTech{
+    width: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: grey;
+    border-radius: 32px;
+    color: white;
+    font-size: 11pt;
+}
+
+
